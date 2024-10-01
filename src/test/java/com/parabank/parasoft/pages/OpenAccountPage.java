@@ -5,31 +5,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class DashboardPage extends LoginPage{
-    public DashboardPage(WebDriver driver) {
+public class OpenAccountPage extends BasePage {
+
+    public OpenAccountPage(WebDriver driver) {
         super(driver);
     }
-
-    public boolean hasLogOutLinkText(){
+    public OpenAccountPage selectAccountType(String value){
         GeneralUtil.waitForSee();
-        return getWebElements(By.linkText("Log Out")).size()>0;
-    }
-
-    public OpenAccountPage clickOpenAccountLink(){
-        clickElement(By.linkText("Open New Account"));
-        return getInstance(OpenAccountPage.class);
-    }
-
-    public DashboardPage selectAccountType(String value){
         new Select(getWebElement(By.cssSelector("select#type"))).selectByValue(value);
         return this;
     }
-
-    public DashboardPage selectAccountType(int index){
+    public OpenAccountPage deselectAccountType(int index){
         new Select(getWebElement(By.cssSelector("select#type"))).selectByIndex(index);
         return this;
     }
-    public DashboardPage clickOpenAccountBtn(){
+
+    public OpenAccountPage clickOpenAccountBtn(){
         clickElement(By.cssSelector("input.button"));
         return this;
     }
@@ -37,10 +28,5 @@ public class DashboardPage extends LoginPage{
         GeneralUtil.waitForSee();
         return getWebElements(By.id("newAccountId")).size()>0;
     }
-
-    public TransferFundsPage clickFundTransfer(){
-        clickElement(By.linkText("Transfer Fund"));
-        return getInstance(TransferFundsPage.class);
-    }
-
 }
+
