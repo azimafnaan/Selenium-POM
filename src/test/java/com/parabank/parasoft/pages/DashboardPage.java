@@ -9,5 +9,6 @@ public class DashboardPage extends LoginPage{
 
     public void TestPrint(){
         System.out.println("Hello World!");
+        System.out.println("Test Automation!");
     }
 }
