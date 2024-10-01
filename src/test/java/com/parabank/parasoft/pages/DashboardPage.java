@@ -6,4 +6,8 @@ public class DashboardPage extends LoginPage{
     public DashboardPage(WebDriver driver) {
         super(driver);
     }
+
+    public void TestPrint(){
+        System.out.println("Hello World!");
+    }
 }
