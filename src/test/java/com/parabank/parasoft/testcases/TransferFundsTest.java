@@ -7,11 +7,11 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TransferFundsTest extends BaseTest{
-    @Test(enabled = false)
+    @Test
     public void fundTransferShouldSucceed(){
     DashboardPage dashboardPage = page.getInstance(LoginPage.class)
-                .fillUserName("zozo")
-                .fillPassword("12345678")
+                .fillUserName("roro")
+                .fillPassword("roro")
                 .clickLoginBtn();
         Assert.assertTrue(dashboardPage.hasLogOutLinkText());
         int amount = 2000;

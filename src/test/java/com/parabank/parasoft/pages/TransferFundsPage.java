@@ -14,6 +14,7 @@ public class TransferFundsPage extends BasePage{
         return this;
     }
     public TransferFundsPage clickTransferBtn(){
+        GeneralUtil.waitForSee();
         clickElement(By.cssSelector("input.button"));
         return this;
     }
