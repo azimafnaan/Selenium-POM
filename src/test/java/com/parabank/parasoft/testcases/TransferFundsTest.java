@@ -10,8 +10,8 @@ public class TransferFundsTest extends BaseTest{
     @Test
     public void fundTransferShouldSucceed(){
     DashboardPage dashboardPage = page.getInstance(LoginPage.class)
-                .fillUserName("roro")
-                .fillPassword("roro")
+                .fillUserName("zozo")
+                .fillPassword("12345678")
                 .clickLoginBtn();
         Assert.assertTrue(dashboardPage.hasLogOutLinkText());
         int amount = 2000;
