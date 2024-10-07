@@ -40,6 +40,7 @@ public class DashboardPage extends LoginPage{
 
     public TransferFundsPage clickFundTransfer(){
         clickElement(By.linkText("Transfer Fund"));
+
         return getInstance(TransferFundsPage.class);
     }
 
