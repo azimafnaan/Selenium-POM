@@ -1,5 +1,4 @@
 package com.parabank.parasoft.testcases;
-
 import com.parabank.parasoft.pages.DashboardPage;
 import com.parabank.parasoft.pages.LoginPage;
 import com.parabank.parasoft.pages.TransferFundsPage;
