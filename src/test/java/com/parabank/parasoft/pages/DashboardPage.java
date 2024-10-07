@@ -12,16 +12,19 @@ public class DashboardPage extends LoginPage{
 
     public boolean hasLogOutLinkText(){
         GeneralUtil.waitForSee();
+
         return getWebElements(By.linkText("Log Out")).size()>0;
     }
 
     public OpenAccountPage clickOpenAccountLink(){
         clickElement(By.linkText("Open New Account"));
+
         return getInstance(OpenAccountPage.class);
     }
 
     public DashboardPage selectAccountType(String value){
         new Select(getWebElement(By.cssSelector("select#type"))).selectByValue(value);
+
         return this;
     }
 
