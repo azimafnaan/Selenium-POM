@@ -1,5 +1,4 @@
 package com.parabank.parasoft.pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +15,7 @@ public class BasePage extends Page{
         WebElement element=null;
         try{
             element = driver.findElement(selector);
-        }catch (Exeption e){
+        }catch (Exception e){
             System.out.println(selector.toString() + "Not such element found");
         }
         return element;
@@ -40,11 +39,11 @@ public class BasePage extends Page{
 
     @Override
     public void clickElement(By selector) {
-        wait.util(ExpectedConditions.elementToBeClickable(getWebElement(selector))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(getWebElement(selector))).click();
     }
 
     @Override
     public String getElementText(By selector) {
-       return wait.util(ExpectedConditions.presenceOfElementLocated(selector)).getText().trim();
+       return wait.until(ExpectedConditions.presenceOfElementLocated(selector)).getText().trim();
     }
 }

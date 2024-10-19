@@ -1,5 +1,6 @@
 package com.parabank.parasoft.pages;
 
+import com.parabank.parasoft.util.GeneralUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,12 +12,12 @@ import java.util.List;
 
 public abstract class Page {
     WebDriver driver;
-    WebDriver wait;
+    WebDriverWait wait;
 
 
    public Page(WebDriver driver){
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(GeneralUtil.WAIT_TIME));
 
     }
     public abstract WebElement getWebElement(By selector);
